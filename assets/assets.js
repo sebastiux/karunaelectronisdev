@@ -47,10 +47,27 @@ import product_details_page_apple_earphone_image3 from "./product_details_page_a
 import product_details_page_apple_earphone_image4 from "./product_details_page_apple_earphone_image4.png";
 import product_details_page_apple_earphone_image5 from "./product_details_page_apple_earphone_image5.png";
 
+// Imágenes específicas de electrónicos para Karuna
+import instrumentationfluke from './instrumentationfluke.jpg';
+import transistor from './transistor.png';
+import capacitor from './capacitor.png';
+import fluketools from './fluketools.jpg';
+import flukenicebanner from './flukenicebanner.png';
+import pcbdesign from './pcbdesign.jpg';
+import components from './components.jpg';
+
 export const assets = {
   logo,
   search_icon,
   user_icon,
+  // Imágenes de electrónicos principales
+  instrumentationfluke,
+  transistor,
+  capacitor,
+  flukenicebanner,
+  pcbdesign,
+  components,
+  fluketools,
   cart_icon,
   add_icon,
   order_icon,
@@ -70,6 +87,10 @@ export const assets = {
   star_icon,
   redirect_icon,
   star_dull_icon,
+  // Header images adaptadas para electrónicos
+  header_arduino_image: instrumentationfluke, // Reutilizamos para Arduino
+  header_fluke_image: fluketools, // Para instrumentos Fluke
+  header_pcb_image: pcbdesign, // Para diseño PCB
   header_headphone_image,
   header_playstation_image,
   header_macbook_image,
@@ -114,7 +135,6 @@ export const CartIcon = () => {
         <rect width="18" height="18" fill="white" />
       </defs>
     </svg>
-
   )
 }
 
@@ -130,299 +150,292 @@ export const HomeIcon = () => (
   </svg>
 );
 
+// Productos dummy para Karuna Electronics
 export const productsDummyData = [
+  // Microcontroladores
   {
-    "_id": "67a1f4e43f34a77b6dde9144",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Apple AirPods Pro 2nd gen",
-    "description": "Apple AirPods Pro (2nd Gen) with MagSafe Case (USB-C) provide excellent sound, active noise cancellation, and a comfortable fit. The USB-C case ensures quick charging, and they pair seamlessly with Apple devices for an effortless audio experience.",
-    "price": 499.99,
-    "offerPrice": 399.99,
+    "_id": "mc001",
+    "name": "Arduino UNO R3 - Microcontrolador ATmega328P",
+    "partNumber": "A000066",
+    "description": "Placa de desarrollo basada en ATmega328P, ideal para proyectos educativos e industriales. Compatible con shields y amplia comunidad de soporte técnico.",
+    "price": 650.00,
+    "offerPrice": 520.00,
+    "keySpecs": "ATmega328P, 14 I/O digitales, 6 entradas analógicas, USB",
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/k4dafzhwhgcn5tnoylrw.webp",
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/j212frakb8hdrhvhajhg.webp",
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/imwuugqxsajuwqpkegb5.webp",
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/k1oqaslw5tb3ebw01vvj.webp"
+      instrumentationfluke,
+      components,
+      pcbdesign
     ],
-    "category": "Earphone",
-    "date": 1738667236865,
-    "__v": 0
+    "category": "Microcontroladores",
+    "datasheet": "https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf",
+    "inStock": true,
+    "quantity": 45,
+    "date": Date.now()
   },
   {
-    "_id": "67a1f52e3f34a77b6dde914a",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Bose QuietComfort 45",
-    "description": "The Bose QuietComfort 45 headphones are engineered for exceptional sound quality and unparalleled noise cancellation. With a 24-hour battery life and comfortable, lightweight design, these headphones deliver premium audio for any environment. Whether on a flight, in the office, or at home, the Bose QC45 blocks out distractions, offering an immersive listening experience.",
-    "price": 429.99,
-    "offerPrice": 329.99,
+    "_id": "mc002",
+    "name": "ESP32 DevKit V1 - WiFi y Bluetooth Integrado",
+    "partNumber": "ESP32-DEVKITV1",
+    "description": "Módulo de desarrollo con WiFi y Bluetooth dual-band, perfecto para aplicaciones IoT y conectividad inalámbrica avanzada.",
+    "price": 280.00,
+    "offerPrice": 245.00,
+    "keySpecs": "WiFi 802.11, Bluetooth 4.2, 34 GPIO, Dual Core",
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/m16coelz8ivkk9f0nwrz.webp"
+      components,
+      pcbdesign
     ],
-    "category": "Headphone",
-    "date": 1738667310300,
-    "__v": 0
+    "category": "Microcontroladores",
+    "datasheet": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf",
+    "inStock": true,
+    "quantity": 78,
+    "date": Date.now()
   },
   {
-    "_id": "67a1f5663f34a77b6dde914c",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Samsung Galaxy S23",
-    "description": "The Samsung Galaxy S23 offers an all-encompassing mobile experience with its advanced AMOLED display, offering vibrant visuals and smooth interactions. Equipped with top-of-the-line fitness tracking features and cutting-edge technology, this phone delivers outstanding performance. With powerful hardware, a sleek design, and long battery life, the S23 is perfect for those who demand the best in mobile innovation.",
-    "price": 899.99,
-    "offerPrice": 799.99,
+    "_id": "mc003",
+    "name": "Raspberry Pi 4 Model B - Computadora de Placa Única",
+    "partNumber": "RPI4-MODBP-4GB",
+    "description": "Computadora completa de tamaño reducido con 4GB RAM, ideal para proyectos avanzados, servidores y aplicaciones educativas.",
+    "price": 1850.00,
+    "offerPrice": 1650.00,
+    "keySpecs": "ARM Cortex-A72, 4GB RAM, WiFi, Bluetooth, 4K video",
     "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/xjd4eprpwqs7odbera1w.webp"
+      macbook_image,
+      components
     ],
-    "category": "Smartphone",
-    "date": 1738667366224,
-    "__v": 0
+    "category": "Microcontroladores",
+    "datasheet": "https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf",
+    "inStock": true,
+    "quantity": 23,
+    "date": Date.now()
   },
-  {
-    "_id": "67a1f5993f34a77b6dde914e",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Garmin Venu 2",
-    "description": "The Garmin Venu 2 smartwatch blends advanced fitness tracking with sophisticated design, offering a wealth of features such as heart rate monitoring, GPS, and sleep tracking. Built with a 24-hour battery life, this watch is ideal for fitness enthusiasts and anyone looking to enhance their daily lifestyle. With a stunning AMOLED display and customizable watch faces, the Venu 2 combines technology with style seamlessly.",
-    "price": 399.99,
-    "offerPrice": 349.99,
-    "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/hdfi4u3fmprazpnrnaga.webp"
-    ],
-    "category": "Earphone",
-    "date": 1738667417511,
-    "__v": 0
-  },
-  {
-    "_id": "67a1f5ef3f34a77b6dde9150",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "PlayStation 5",
-    "description": "The PlayStation 5 takes gaming to the next level with ultra-HD graphics, a powerful 825GB SSD, and ray tracing technology for realistic visuals. Whether you're into high-action games or immersive storytelling, the PS5 delivers fast loading times, seamless gameplay, and stunning visuals. It's a must-have for any serious gamer looking for the ultimate gaming experience.",
-    "price": 599.99,
-    "offerPrice": 499.99,
-    "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/dd3l13vfoartrgbvkkh5.webp"
-    ],
-    "category": "Accessories",
-    "date": 1738667503075,
-    "__v": 0
-  },
-  {
-    "_id": "67a1f70c3f34a77b6dde9156",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Canon EOS R5",
-    "description": "The Canon EOS R5 is a game-changing mirrorless camera with a 45MP full-frame sensor, offering ultra-high resolution and the ability to shoot 8K video. Whether you're capturing professional-quality stills or cinematic video footage, this camera delivers exceptional clarity, speed, and color accuracy. With advanced autofocus and in-body stabilization, the R5 is ideal for photographers and videographers alike.",
-    "price": 4199.99,
-    "offerPrice": 3899.99,
-    "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/r5h370zuujvrw461c6wy.webp"
-    ],
-    "category": "Camera",
-    "date": 1738667788883,
-    "__v": 0
-  },
-  {
-    "_id": "67a1f7c93f34a77b6dde915a",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "MacBook Pro 16",
-    "description": "The MacBook Pro 16, powered by Apple's M2 Pro chip, offers outstanding performance with 16GB RAM and a 512GB SSD. Whether you're editing high-resolution video, developing software, or multitasking with ease, this laptop can handle the toughest tasks. It features a stunning Retina display with True Tone technology, making it a top choice for professionals in creative industries or anyone who demands premium performance in a portable form.",
-    "price": 2799.99,
-    "offerPrice": 2499.99,
-    "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/rzri7kytphxalrm9rubd.webp"
-    ],
-    "category": "Laptop",
-    "date": 1738667977644,
-    "__v": 0
-  },
-  {
-    "_id": "67a1f8363f34a77b6dde915c",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Sony WF-1000XM5",
-    "description": "Sony WF-1000XM5 true wireless earbuds deliver immersive sound with Hi-Res Audio and advanced noise cancellation technology. Designed for comfort and quality, they provide a stable, snug fit for a secure listening experience. Whether you're working out or traveling, these earbuds will keep you connected with the world around you while enjoying rich, clear sound.",
-    "price": 349.99,
-    "offerPrice": 299.99,
-    "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/e3zjaupyumdkladmytke.webp"
-    ],
-    "category": "Earphone",
-    "date": 1738668086331,
-    "__v": 0
-  },
-  {
-    "_id": "67a1f85e3f34a77b6dde915e",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Samsung Projector 4k",
-    "description": "The Samsung 4K Projector offers an immersive cinematic experience with ultra-high-definition visuals and realistic color accuracy. Equipped with a built-in speaker, it delivers rich sound quality to complement its stunning 4K resolution. Perfect for movie nights, gaming, or presentations, this projector is the ultimate choice for creating an at-home theater experience or professional setting.",
-    "price": 1699.99,
-    "offerPrice": 1499.99,
-    "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/qqdcly8a8vkyciy9g0bw.webp"
-    ],
-    "category": "Accessories",
-    "date": 1738668126660,
-    "__v": 0
-  },
-  {
-    "_id": "67a1fa4b3f34a77b6dde9166",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "ASUS ROG Zephyrus G16",
-    "description": "The ASUS ROG Zephyrus G16 gaming laptop is powered by the Intel Core i9 processor and features an RTX 4070 GPU, delivering top-tier gaming and performance. With 16GB of RAM and a 1TB SSD, this laptop is designed for gamers who demand extreme power, speed, and storage. Equipped with a stunning 16-inch display, it's built to handle the most demanding titles and applications with ease.",
-    "price": 2199.99,
-    "offerPrice": 1999.99,
-    "image": [
-      "https://raw.githubusercontent.com/avinashdm/gs-images/main/quickcart/wig1urqgnkeyp4t2rtso.webp"
-    ],
-    "category": "Laptop",
-    "date": 1738668619198,
-    "__v": 0
-  }
-]
 
-export const userDummyData = {
-  "_id": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-  "name": "GreatStack",
-  "email": "admin@example.com",
-  "imageUrl": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ycnlnUnFiUDBYT2dEZ2h1ZmRXcGlpdWV5OXoiLCJyaWQiOiJ1c2VyXzJzWkZIUzFVSUl5c0p5RFZ6Q3BRaFVoVElodyJ9",
-  "cartItems": {
-    // "67a1f4e43f34a77b6dde9144": 3
+  // Amplificadores Operacionales
+  {
+    "_id": "op001",
+    "name": "LM358 - Amplificador Operacional Dual de Propósito General",
+    "partNumber": "LM358N",
+    "description": "OpAmp dual de bajo consumo, alimentación simple, ideal para aplicaciones de acondicionamiento de señales y filtros activos básicos.",
+    "price": 15.00,
+    "offerPrice": 12.00,
+    "keySpecs": "Dual, Single Supply, 1MHz GBW, DIP-8",
+    "image": [
+      components,
+      transistor
+    ],
+    "category": "OpAmps",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/lm358.pdf",
+    "inStock": true,
+    "quantity": 150,
+    "date": Date.now()
   },
+  {
+    "_id": "op002",
+    "name": "TL074 - Amplificador Operacional Cuádruple JFET",
+    "partNumber": "TL074CN",
+    "description": "OpAmp cuádruple con entrada JFET, baja corriente de bias, excelente para aplicaciones de audio e instrumentación de precisión.",
+    "price": 35.00,
+    "offerPrice": 28.00,
+    "keySpecs": "Quad, JFET Input, 3MHz GBW, Low Bias Current",
+    "image": [
+      components,
+      transistor
+    ],
+    "category": "OpAmps",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/tl074.pdf",
+    "inStock": true,
+    "quantity": 89,
+    "date": Date.now()
+  },
+
+  // Transistores
+  {
+    "_id": "tr001",
+    "name": "2N2222A - Transistor NPN de Propósito General",
+    "partNumber": "2N2222A",
+    "description": "Transistor bipolar NPN clásico para conmutación y amplificación de señales pequeñas, muy versátil y confiable para prototipos.",
+    "price": 8.00,
+    "offerPrice": 6.50,
+    "keySpecs": "NPN, 40V, 800mA, 250MHz, TO-92",
+    "image": [
+      transistor,
+      components
+    ],
+    "category": "Transistores",
+    "datasheet": "https://www.onsemi.com/pdf/datasheet/p2n2222a-d.pdf",
+    "inStock": true,
+    "quantity": 200,
+    "date": Date.now()
+  },
+  {
+    "_id": "tr002",
+    "name": "IRF540N - MOSFET de Potencia Canal N",
+    "partNumber": "IRF540N",
+    "description": "MOSFET de potencia para conmutación de altas corrientes, ideal para control de motores y fuentes de alimentación switching.",
+    "price": 25.00,
+    "offerPrice": 22.00,
+    "keySpecs": "N-Channel, 100V, 33A, 44mΩ RDS(on), TO-220",
+    "image": [
+      transistor,
+      components
+    ],
+    "category": "Transistores",
+    "datasheet": "https://www.infineon.com/dgdl/irf540n.pdf",
+    "inStock": true,
+    "quantity": 67,
+    "date": Date.now()
+  },
+
+  // Instrumentos Fluke
+  {
+    "_id": "fl001",
+    "name": "Fluke 87V - Multímetro Digital Industrial True RMS",
+    "partNumber": "FLUKE-87V",
+    "description": "Multímetro industrial de alta precisión con medición True RMS, ideal para mantenimiento industrial y laboratorio de calibración.",
+    "price": 8950.00,
+    "offerPrice": 8200.00,
+    "keySpecs": "True RMS, 4000 counts, CAT III 1000V, CAT IV 600V",
+    "image": [
+      fluketools,
+      instrumentationfluke
+    ],
+    "category": "Instrumentos Fluke",
+    "datasheet": "https://dam-assets.fluke.com/s3fs-public/6004508_EN_w.pdf",
+    "inStock": true,
+    "quantity": 5,
+    "date": Date.now()
+  },
+  {
+    "_id": "fl002",
+    "name": "Fluke 117 - Multímetro para Electricistas",
+    "partNumber": "FLUKE-117",
+    "description": "Multímetro compacto ideal para electricistas, con detección de voltaje sin contacto y mediciones seguras en instalaciones.",
+    "price": 4850.00,
+    "offerPrice": 4450.00,
+    "keySpecs": "VoltAlert, AutoV/LoZ, 6000 counts, CAT III 600V",
+    "image": [
+      fluketools,
+      instrumentationfluke
+    ],
+    "category": "Instrumentos Fluke",
+    "datasheet": "https://dam-assets.fluke.com/s3fs-public/6002852_EN_w.pdf",
+    "inStock": true,
+    "quantity": 8,
+    "date": Date.now()
+  },
+
+  // Componentes Pasivos
+  {
+    "_id": "cp001",
+    "name": "Resistencias de Precisión 1% - Kit 600 piezas",
+    "partNumber": "RES-KIT-600",
+    "description": "Kit completo de resistencias de metal film 1/4W con tolerancia del 1%, valores estándar E24 de 10Ω a 1MΩ para laboratorio.",
+    "price": 320.00,
+    "offerPrice": 280.00,
+    "keySpecs": "1/4W, ±1%, Metal Film, E24 series, 600 piezas",
+    "image": [
+      components,
+      capacitor
+    ],
+    "category": "Componentes Pasivos",
+    "datasheet": "https://www.vishay.com/docs/28705/mf0204.pdf",
+    "inStock": true,
+    "quantity": 25,
+    "date": Date.now()
+  },
+  {
+    "_id": "cp002",
+    "name": "Capacitores Electrolíticos - Kit Variado",
+    "partNumber": "CAP-ELEC-KIT",
+    "description": "Surtido de capacitores electrolíticos de aluminio, valores desde 1µF hasta 1000µF, voltajes de 16V a 50V para filtrado.",
+    "price": 180.00,
+    "offerPrice": 150.00,
+    "keySpecs": "1µF-1000µF, 16V-50V, Radial, 120 piezas",
+    "image": [
+      capacitor,
+      components
+    ],
+    "category": "Componentes Pasivos",
+    "datasheet": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1215.pdf",
+    "inStock": true,
+    "quantity": 42,
+    "date": Date.now()
+  }
+];
+
+// Usuario dummy para México
+export const userDummyData = {
+  "_id": "user_karuna_mx_001",
+  "name": "Ing. Carlos González",
+  "email": "carlos.gonzalez@universidad.mx",
+  "imageUrl": "https://img.clerk.com/default-user.jpg",
+  "cartItems": {},
   "__v": 0
 }
 
+// Órdenes dummy para México
 export const orderDummyData = [
   {
-    "_id": "67a20934b3db72db5cc77b2b",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
+    "_id": "ord_mx_001",
+    "userId": "user_karuna_mx_001",
     "items": [
       {
         "product": {
-          "_id": "67a1f4e43f34a77b6dde9144",
-          "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-          "name": "Apple AirPods Pro",
-          "description": "Apple AirPods Pro (2nd Gen) with MagSafe Case (USB-C) provide excellent sound, active noise cancellation, and a comfortable fit. The USB-C case ensures quick charging, and they pair seamlessly with Apple devices for an effortless audio experience.",
-          "price": 499.99,
-          "offerPrice": 399.99,
-          "image": [
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667237/lrllaprpos2pnp5c9pyy.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667238/jqotgy2rvm36vfjv6lxl.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667238/niw7tqxvjsxt7wcehxeo.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667237/h8cq4x9cfzqzwaiarvpk.png"
-          ],
-          "category": "Earphone",
-          "date": 1738667236865,
-          "__v": 0
+          "_id": "mc001",
+          "name": "Arduino UNO R3 - Microcontrolador ATmega328P",
+          "partNumber": "A000066",
+          "description": "Placa de desarrollo basada en ATmega328P, ideal para proyectos educativos e industriales.",
+          "price": 650.00,
+          "offerPrice": 520.00,
+          "image": [instrumentationfluke],
+          "category": "Microcontroladores"
         },
-        "quantity": 1,
-        "_id": "67a20934b3db72db5cc77b2c"
-      }
-    ],
-    "amount": 406.99,
-    "address": {
-      "_id": "67a1e4233f34a77b6dde9055",
-      "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-      "fullName": "GreatStack",
-      "phoneNumber": "0123456789",
-      "pincode": 654321,
-      "area": "Main Road , 123 Street, G Block",
-      "city": "City",
-      "state": "State",
-      "__v": 0
-    },
-    "status": "Order Placed",
-    "date": 1738672426822,
-    "__v": 0
-  },
-  {
-    "_id": "67a20949b3db72db5cc77b2e",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "items": [
+        "quantity": 2,
+        "_id": "ord_mx_001_item1"
+      },
       {
         "product": {
-          "_id": "67a1f52e3f34a77b6dde914a",
-          "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-          "name": "Bose QuietComfort 45",
-          "description": "The Bose QuietComfort 45 headphones are engineered for exceptional sound quality and unparalleled noise cancellation. With a 24-hour battery life and comfortable, lightweight design, these headphones deliver premium audio for any environment. Whether on a flight, in the office, or at home, the Bose QC45 blocks out distractions, offering an immersive listening experience.",
-          "price": 429.99,
-          "offerPrice": 329.99,
-          "image": [
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667311/m16coelz8ivkk9f0nwrz.png"
-          ],
-          "category": "Headphone",
-          "date": 1738667310300,
-          "__v": 0
+          "_id": "op001",
+          "name": "LM358 - Amplificador Operacional Dual",
+          "partNumber": "LM358N",
+          "description": "OpAmp dual de bajo consumo, alimentación simple.",
+          "price": 15.00,
+          "offerPrice": 12.00,
+          "image": [components],
+          "category": "OpAmps"
         },
-        "quantity": 1,
-        "_id": "67a20949b3db72db5cc77b2f"
+        "quantity": 10,
+        "_id": "ord_mx_001_item2"
       }
     ],
-    "amount": 335.99,
+    "amount": 1160.00,
     "address": {
-      "_id": "67a1e4233f34a77b6dde9055",
-      "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-      "fullName": "GreatStack",
-      "phoneNumber": "0123456789",
-      "pincode": 654321,
-      "area": "Main Road , 123 Street, G Block",
-      "city": "City",
-      "state": "State",
+      "_id": "addr_mx_001",
+      "userId": "user_karuna_mx_001",
+      "fullName": "Ing. Carlos González",
+      "phoneNumber": "+52 55 1234 5678",
+      "pincode": "01210",
+      "area": "Av. Universidad 1234, Col. Del Valle",
+      "city": "Ciudad de México",
+      "state": "CDMX",
       "__v": 0
     },
-    "status": "Order Placed",
-    "date": 1738672448031,
-    "__v": 0
-  },
-  {
-    "_id": "67a209bab3db72db5cc77b34",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "items": [
-      {
-        "product": {
-          "_id": "67a1f4e43f34a77b6dde9144",
-          "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-          "name": "Apple AirPods Pro",
-          "description": "Apple AirPods Pro (2nd Gen) with MagSafe Case (USB-C) provide excellent sound, active noise cancellation, and a comfortable fit. The USB-C case ensures quick charging, and they pair seamlessly with Apple devices for an effortless audio experience.",
-          "price": 499.99,
-          "offerPrice": 399.99,
-          "image": [
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667237/lrllaprpos2pnp5c9pyy.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667238/jqotgy2rvm36vfjv6lxl.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667238/niw7tqxvjsxt7wcehxeo.png",
-            "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667237/h8cq4x9cfzqzwaiarvpk.png"
-          ],
-          "category": "Earphone",
-          "date": 1738667236865,
-          "__v": 0
-        },
-        "quantity": 1,
-        "_id": "67a209bab3db72db5cc77b35"
-      }
-    ],
-    "amount": 406.99,
-    "address": {
-      "_id": "67a1e4233f34a77b6dde9055",
-      "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-      "fullName": "GreatStack",
-      "phoneNumber": "0123456789",
-      "pincode": 654321,
-      "area": "Main Road , 123 Street, G Block",
-      "city": "City",
-      "state": "State",
-      "__v": 0
-    },
-    "status": "Order Placed",
-    "date": 1738672560698,
+    "status": "Procesando",
+    "date": Date.now(),
     "__v": 0
   }
-]
+];
 
+// Direcciones dummy para México
 export const addressDummyData = [
   {
-    "_id": "67a1e4233f34a77b6dde9055",
-    "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "fullName": "GreatStack",
-    "phoneNumber": "0123456789",
-    "pincode": 654321,
-    "area": "Main Road , 123 Street, G Block",
-    "city": "City",
-    "state": "State",
+    "_id": "addr_mx_001",
+    "userId": "user_karuna_mx_001",
+    "fullName": "Ing. Carlos González",
+    "phoneNumber": "+52 55 1234 5678",
+    "pincode": "01210",
+    "area": "Av. Universidad 1234, Col. Del Valle",
+    "city": "Ciudad de México",
+    "state": "CDMX",
     "__v": 0
   }
 ]

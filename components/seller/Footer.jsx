@@ -4,26 +4,152 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="flex md:flex-row flex-col-reverse items-center justify-between text-left w-full px-10">
-      <div className="flex items-center gap-4">
-        <Image className="hidden md:block" src={assets.logo} alt="logo" />
-        <div className="hidden md:block h-7 w-px bg-gray-500/60"></div>
-        <p className="py-4 text-center text-xs md:text-sm text-gray-500">
-          Copyright 2025 © greatstack.dev All Right Reserved.
-        </p>
+    <footer>
+      <div className="flex flex-col md:flex-row items-start justify-center px-6 md:px-16 lg:px-32 gap-10 py-14 border-b border-gray-300 text-gray-600">
+        <div className="w-full md:w-2/5">
+          <Image className="w-28 md:w-32" src={assets.logo} alt="Karuna logo" />
+          <p className="mt-6 text-sm leading-relaxed">
+            Karuna es tu socio confiable en componentes electrónicos de alta calidad. 
+            Ofrecemos microcontroladores, amplificadores operacionales, circuitos integrados, 
+            transistores e instrumentos Fluke para universidades y desarrollos industriales. 
+            Nuestro equipo también brinda servicios profesionales de diseño de PCB y proyectos electrónicos.
+          </p>
+          <div className="flex items-center gap-4 mt-6">
+            <a href="#" className="hover:scale-110 transition-transform">
+              <Image src={assets.facebook_icon} alt="Facebook" className="w-6 h-6" />
+            </a>
+            <a href="#" className="hover:scale-110 transition-transform">
+              <Image src={assets.twitter_icon} alt="Twitter" className="w-6 h-6" />
+            </a>
+            <a href="#" className="hover:scale-110 transition-transform">
+              <Image src={assets.instagram_icon} alt="Instagram" className="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+
+        <div className="w-full md:w-1/5 flex items-center justify-start md:justify-center">
+          <div>
+            <h2 className="font-semibold text-gray-800 mb-5 text-yellow-600">Productos</h2>
+            <ul className="text-sm space-y-3">
+              <li>
+                <a className="hover:text-yellow-600 hover:underline transition duration-200" href="#">
+                  Microcontroladores
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-yellow-600 hover:underline transition duration-200" href="#">
+                  Amplificadores Op
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-yellow-600 hover:underline transition duration-200" href="#">
+                  Circuitos Integrados
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-yellow-600 hover:underline transition duration-200" href="#">
+                  Instrumentos Fluke
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-yellow-600 hover:underline transition duration-200" href="#">
+                  Transistores
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="w-full md:w-1/5 flex items-start justify-start md:justify-center">
+          <div>
+            <h2 className="font-semibold text-gray-800 mb-5 text-blue-600">Servicios</h2>
+            <ul className="text-sm space-y-3">
+              <li>
+                <a className="hover:text-blue-600 hover:underline transition duration-200" href="#">
+                  Diseño de PCB
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-blue-600 hover:underline transition duration-200" href="#">
+                  Proyectos Electrónicos
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-blue-600 hover:underline transition duration-200" href="#">
+                  Consultoría Técnica
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-blue-600 hover:underline transition duration-200" href="#">
+                  Soporte Universitario
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="w-full md:w-1/5 flex items-start justify-start md:justify-center">
+          <div>
+            <h2 className="font-semibold text-gray-800 mb-5 text-gray-700">Empresa</h2>
+            <ul className="text-sm space-y-3 mb-6">
+              <li>
+                <a className="hover:text-gray-800 hover:underline transition duration-200" href="#">
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-gray-800 hover:underline transition duration-200" href="#">
+                  Acerca de Nosotros
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-gray-800 hover:underline transition duration-200" href="#">
+                  Contacto
+                </a>
+              </li>
+              <li>
+                <a className="hover:text-gray-800 hover:underline transition duration-200" href="#">
+                  Política de Privacidad
+                </a>
+              </li>
+            </ul>
+            
+            <div>
+              <h3 className="font-medium text-gray-800 mb-3">Contacto</h3>
+              <div className="text-sm space-y-2">
+                <p className="flex items-center gap-2">
+                  <span className="text-yellow-600">📞</span>
+                  +52-55-1234-5678
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="text-yellow-600">✉️</span>
+                  ventas@karuna.mx
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="text-blue-600">🛠️</span>
+                  soporte@karuna.mx
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="flex items-center gap-3">
-        <a href="#">
-          <Image src={assets.facebook_icon} alt="facebook_icon" />
-        </a>
-        <a href="#">
-          <Image src={assets.twitter_icon} alt="twitter_icon" />
-        </a>
-        <a href="#">
-          <Image src={assets.instagram_icon} alt="instagram_icon" />
-        </a>
+      
+      <div className="bg-gray-50 py-4">
+        <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 lg:px-32">
+          <p className="text-xs md:text-sm text-gray-500 text-center md:text-left">
+            Copyright 2025 © <span className="text-yellow-600 font-medium">Karuna Electronics</span>. Todos los derechos reservados.
+          </p>
+          <div className="flex items-center gap-4 mt-2 md:mt-0">
+            <span className="text-xs text-gray-400">Hecho en México 🇲🇽</span>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></span>
+              <span className="text-xs text-gray-500">Envíos a toda la República</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
