@@ -2,21 +2,17 @@
   "name": "karuna-electronics",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sebastiux.github.io/karunaelectronisdev",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && gh-pages -d out",
+    "predeploy": "npm run build"
   },
   "dependencies": {
-    "@clerk/clerk-react": "^5.32.1",
-    "@clerk/nextjs": "^6.23.0",
-    "bcryptjs": "^3.0.2",
-    "cloudinary": "^2.7.0",
-    "inngest": "^3.39.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongodb": "^6.17.0",
-    "mongoose": "^8.16.0",
+    "@clerk/nextjs": "^6.23.3",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -26,6 +22,7 @@
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
+    "gh-pages": "^6.3.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   }

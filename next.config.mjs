@@ -6,14 +6,24 @@ const nextConfig = {
     distDir: 'out',
     images: {
       unoptimized: true,
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'res.cloudinary.com',
+          pathname: '**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'raw.githubusercontent.com',
+          pathname: '**',
+        },
+      ],
     },
-    // Set the base path to your repository name
     basePath: '/karunaelectronisdev',
     assetPrefix: '/karunaelectronisdev/',
-    // Disable server-side features that don't work with static export
     eslint: {
       ignoreDuringBuilds: true,
     },
-  }
+  };
   
-  module.exports = nextConfig
+  export default nextConfig;
